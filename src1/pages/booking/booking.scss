@@ -1,0 +1,345 @@
+page-booking {
+	.list {
+		margin-bottom: 0;
+
+		&.profile {
+			box-shadow: 0 2px 19px -10px rgba(0, 0, 0, .5);
+
+			.item {
+				align-items: baseline;
+				padding-top: 4px;
+				padding-bottom: 0px;
+				margin-bottom: 0px;
+				padding-right: 12px;
+
+				//                box-shadow: 0 1px 5px rgba(0, 0, 0, 0.10);
+				ion-avatar {
+					width: 70px;
+					height: 70px;
+					position: relative;
+					overflow: hidden;
+					border-radius: 50%;
+
+					img {
+						position: absolute;
+						top: 0 !important;
+						left: -50% !important;
+						right: -50% !important;
+						bottom: 0 !important;
+						margin: auto !important;
+						width: 100%;
+						height: auto;
+						max-width: unset !important;
+					}
+				}
+
+				.label {
+					white-space: normal;
+					margin-bottom: 10px;
+				}
+
+				h2 {
+					font-size: 1.65rem;
+					display: flex;
+					align-items: center;
+					padding-top: 20px;
+
+					strong {
+						font-weight: 700 !important;
+					}
+
+					span {
+						font-size: 1.2rem;
+						color: $light-grey-color;
+					}
+
+					ion-icon {
+						min-width: 25px;
+						text-align: right;
+						//margin: 0 5px;
+						font-size: 2rem;
+					}
+
+					.callmsg {
+						margin-left: auto;
+						display: flex;
+						align-items: center;
+
+						ion-icon {
+							display: block;
+							font-size: 2rem;
+						}
+					}
+				}
+
+				.details {
+					margin-top: 15px;
+
+					p {
+						font-size: 1.23rem;
+						margin-bottom: 14px;
+
+						small {
+							font-size: 1.1rem;
+							color: $light-grey-color;
+							display: block;
+							margin-bottom: 1px;
+						}
+
+						&.job-fess {
+							color: darken($grey-color, 20%);
+
+							img {
+								width: 8px;
+								margin-right: 3px;
+							}
+						}
+					}
+
+					.row {
+						margin: 0 -5px;
+
+						.col {
+							overflow-x: hidden;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.btn-container {
+		.row {
+			overflow: hidden;
+
+			.col {
+				padding: 0;
+
+				.button {
+					margin-right: 2px !important;
+					height: 5.2rem !important;
+					font-size: 1.5rem !important;
+					font-weight: 400 !important;
+					color: $light-grey-color;
+					margin: 0;
+					background: $white-color !important;
+
+					&:hover,
+					&:focus,
+					&:active {
+						background: none !important;
+					}
+
+					ion-icon {
+						margin-right: 5px;
+						font-size: 1.9rem !important;
+					}
+
+					&.disable {
+						span {
+							opacity: .2;
+						}
+					}
+
+					&.text-green {
+						background: $green-color !important;
+
+						.button-inner {
+							color: $white-color !important;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.job-status {
+		padding: 26px 28px;
+		padding-bottom: 0;
+
+		.circle {
+			display: block;
+			width: 10px;
+			height: 10px;
+			border-radius: 50%;
+			background: $light-grey-color;
+			margin-left: 2px;
+			margin-top: 20px;
+		}
+
+		h2 {
+			margin: 0;
+			font-size: 1.58rem;
+			padding-bottom: 12px;
+			color: darken($grey-color, 20%);
+		}
+
+		.list {
+			margin-bottom: 0;
+			padding: 0;
+
+			.item {
+				position: relative;
+				min-height: 65px;
+				align-items: flex-start;
+				background: none;
+				padding: 0;
+				padding-bottom: 5px;
+
+				&::after,
+				&::before {
+					content: '';
+					position: absolute;
+					top: 0px;
+					left: 7px;
+					right: 0;
+					width: 1px;
+					height: 20px;
+					background: #c9c9c9;
+					display: block
+				}
+
+				&::after {
+					top: auto;
+					bottom: 0;
+					height: 30px;
+				}
+
+				&:first-child {
+					&::before {
+						display: none;
+					}
+				}
+
+				.label {
+					margin: 0;
+				}
+
+				.text {
+					position: relative;
+					top: 0;
+					bottom: 0;
+					left: 14px !important;
+					height: 65px;
+					width: 100%;
+					background: $white-color;
+					padding-top: 13px;
+					padding-bottom: 13px;
+					padding-left: 6px;
+
+					&::after {
+						content: '';
+						position: absolute;
+						top: 17px;
+						left: -7px;
+						width: 14px;
+						height: 14px;
+						display: block;
+						transform: rotate(45deg);
+						background: $white-color;
+					}
+
+					h4 {
+						margin: 0;
+						font-size: 1.58rem;
+						font-weight: 500;
+						position: relative;
+						left: 12px;
+						height: 100%;
+						line-height: 20px;
+						width: 100%;
+
+						small {
+							display: block;
+							position: absolute;
+							bottom: 13px;
+							font-size: 1.1rem;
+							color: $light-grey-color;
+							font-weight: 300;
+							top: 20px;
+						}
+					}
+				}
+
+				&.disable {
+					.status {
+						background: $light-grey-color;
+					}
+
+					h4 {
+						opacity: 0.2;
+						line-height: 38px;
+
+						small {
+							display: none;
+						}
+					}
+
+					.text {
+						background-color: transparent;
+
+						&::after {
+							display: none;
+						}
+					}
+
+					.circle {
+						margin-top: 27px;
+					}
+				}
+
+				&.active {
+					h4 {
+						&::after {
+							background: $white-color;
+						}
+					}
+
+					ion-icon {
+						&[item-start] {
+							color: $green-color;
+						}
+					}
+
+					.circle {
+						background: $green-color;
+						position: relative;
+
+						&::after {
+							content: '';
+							border-radius: 50%;
+							border: 1px solid $green-color;
+							width: 12px;
+							height: 12px;
+							position: absolute;
+							display: block;
+							top: -2px;
+							left: -2px;
+						}
+					}
+				}
+
+				&:last-child {
+					&::after {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+
+	.location {
+		display: flex;
+		align-items: flex-start;
+
+		ion-icon {
+			display: block;
+			margin: 0 5px;
+			margin-left: auto;
+			font-size: 2rem;
+			transform: rotate(45deg);
+			position: relative;
+			top: 5px;
+		}
+	}
+}

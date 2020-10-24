@@ -1,0 +1,40 @@
+<!--
+  Generated template for the DocumentUploadPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{'upload_document' | translate}} </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+	<div class="verification box-shadow">
+		<h6>{{'doc_verification' | translate}}</h6>
+      <h4 class="d-flex" (click)="pickPicker(2)">
+        <ion-icon class="zmdi zmdi-upload" text-start></ion-icon>
+        <span>
+          {{'upload_document' | translate}}
+          <small *ngIf="profile.document_url">{{'document_uploaded' | translate}}</small>
+        </span>
+
+        <span *ngIf="profile.is_verified==1" class="end">
+          <ion-icon class="zmdi zmdi-check-circle" text-start></ion-icon>
+          {{'verified_profile' | translate}}
+        </span>
+        <span *ngIf="profile.is_verified!=1" class="end">
+          <!-- <ion-icon class="zmdi zmdi-check-circle" text-start></ion-icon> -->
+          {{'verification_pending' | translate}}
+        </span>
+      </h4>
+  </div>
+  <button class="btn" ion-button round full margin-top margin-bottom (click)="save()">
+		{{'save' | translate}}
+	</button>
+
+</ion-content>

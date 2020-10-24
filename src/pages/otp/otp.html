@@ -1,0 +1,24 @@
+<ion-header class="bg-transparent">
+    <ion-navbar>
+        <ion-title><span>{{"otp_verification" | translate}}</span></ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <div id="recaptcha-container"></div>
+    <h1 text-center>{{'verification_code' | translate}}<small>{{'please_type_the_verification_code' | translate}} <br>
+            {{'sent_to' | translate}} {{phoneNumberFull}}</small></h1>
+
+    <div class="form">
+        <ion-input type="number" placeholder="{{'enter_otp' | translate}}" [(ngModel)]="otp"></ion-input>
+        <button ion-button round full class="btn" (click)="verify()">
+            {{'confirm' | translate}}
+        </button>
+        <p text-center>
+            {{'dint_received_code' | translate}}
+            <strong (click)="sendOTP()">
+                {{'resend_now' | translate}}
+            </strong>
+        </p>
+    </div>
+</ion-content>

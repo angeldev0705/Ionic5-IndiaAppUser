@@ -1,0 +1,57 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>{{'select_services' | translate}}
+            <ion-icon class="end" name="md-done-all" (click)="done(cat)"></ion-icon>
+        </ion-title>
+    </ion-navbar>
+    <!-- <div class="logo-box bg-thime">
+        <div *ngIf="parentCategory" class="logo" text-center>
+            <img *ngIf="parentCategory.secondary_image_url" data-src="{{parentCategory.secondary_image_url}}">
+            <img *ngIf="!parentCategory.secondary_image_url && parentCategory.image_url"
+                data-src="{{parentCategory.image_url}}">
+            <img *ngIf="!parentCategory.secondary_image_url && !parentCategory.image_url"
+                src="assets/imgs/empty_category.png">
+            <p class="text-white">{{parentCategory.title}}</p>
+        </div>
+    </div> -->
+</ion-header>
+
+<ion-content>
+    <div class="empty-view" *ngIf="!isLoading && (!subCategoriesNew || !subCategoriesNew.length)">
+        <div style="text-align:center">
+            <img src="assets/imgs/empty_category.png" alt="no offers" />
+            <span style="color:#9E9E9E; font-weight:bold;">
+                {{'no_subcats_to_show' | translate}}
+            </span>
+        </div>
+    </div>
+    <ion-list>
+        <div *ngFor="let cat of subCategoriesNew"> 
+            <ion-item>
+                <ion-label (click)="toggleSelection(cat)">{{cat.title}}</ion-label>
+                <ion-checkbox [checked]="cat.selected" (click)="toggleSelection(cat)"></ion-checkbox>
+            </ion-item>
+            <div *ngIf="!callby && cat.selected"  class="main">
+                <div class="mobselect">
+                    <ion-input type="tel" placeholder="{{'your_charges' | translate}}" [(ngModel)]="cat.price" [value]="cat.price"></ion-input>
+                    <!--<ion-select [(ngModel)]="cat.price"  [okText]="'okay' | translate"
+							[cancelText]="'cancel' | translate">
+							<ion-option value="50">  50 </ion-option>
+							<ion-option value="100"> 100 </ion-option>
+							<ion-option value="150"> 150 </ion-option>
+							<ion-option value="200"> 200 </ion-option>
+							<ion-option value="250"> 250 </ion-option>
+							<ion-option value="300"> 300 </ion-option>
+							<ion-option value="350"> 350 </ion-option>
+							<ion-option value="400"> 400 </ion-option>
+							<ion-option value="450"> 450 </ion-option>
+							<ion-option value="500"> 500 </ion-option>
+					</ion-select>-->
+                </div>
+            </div>
+        </div>
+    </ion-list>
+    <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+        <ion-infinite-scroll-content></ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+</ion-content>

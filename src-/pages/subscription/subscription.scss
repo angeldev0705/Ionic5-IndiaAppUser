@@ -1,0 +1,162 @@
+page-subscription {
+    .header {
+        .header-text {
+            h1 {
+                margin: 0;
+                font-size: 5.5rem;
+                font-weight: 400;
+                padding-top: 15px;
+                padding-bottom: 5px;
+            }
+            h2 {
+                margin: 0;
+                font-size: 1.55rem;
+                font-weight: 300;
+            }
+            p {
+                font-size: 1.58rem;
+                font-weight: 400;
+                margin: 0;
+                padding-top: 15px;
+                padding-bottom: 20px;
+            }
+        }
+    }
+    .list {
+        h4 {
+            margin: 0;
+            font-size: 1.7rem;
+            padding: 20px 10px 17px 37px;
+            color: #fff;
+        }
+        .item {
+            align-items: flex-start;
+            width: calc(100% - 20px);
+            margin: auto;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            box-shadow: 0 2px 3px 0px rgba(0, 0, 0, 0.1);
+            padding: 8px 2px 3px 27px;
+            h2 {
+                margin: 0;
+                font-size: 1.83rem;
+                padding-bottom: 7px;
+                color: #424242;
+            }
+            p {
+                font-size: 1.5rem;
+                color: #c0c0c0;
+                font-weight: 300;
+            }
+            h3 {
+                &[item-end] {
+                    font-size: 1.9rem;
+                    font-weight: 500;
+                    color: #000;
+                }
+            }
+        }
+    }
+    .fixed-bottom {
+        h5 {
+            letter-spacing: 0.5px;
+            font-weight: 400;
+            font-size: 1.55rem;
+            color: #6d6b71;
+            margin-bottom: 16px;
+            strong {
+                font-size: 1.6rem;
+            }
+        }
+    }
+
+    .plans{
+        border-radius: 12px !important;
+        background-color: #fff;
+        width: 90%;
+        margin: auto;
+        margin-bottom: 10px;
+        padding: 10px;
+    }
+
+    .buttn{
+        width: 90%;
+        margin: auto; 
+        margin-top: 10%;   
+        
+        .btn {
+            width: 100%;
+            height: 100%;
+            background-color: #35D400;
+            padding: 14px;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: larger;
+            color: #fff;
+        }
+    }
+
+    .checkbox-md .checkbox-icon {
+        border-radius: 12px !important;
+    }
+
+    ion-item{
+        border-radius: 12px !important;
+    }
+
+    ion-content {
+        background: linear-gradient( #35D400 , white);
+	}
+	
+	.header .toolbar .toolbar-background {
+        background-color: transparent;
+    }
+    
+    .header .toolbar .bar-button .button-inner ion-icon {
+        color:  #FFF;
+        font-size: 3.0rem;
+    }
+
+
+    .dis{
+        width: 96%;
+        margin: auto;
+        display: inline-flex;
+        margin-left: 2%;
+        margin-top: 2%;
+
+        .img{
+            flex: 1;
+            width: 30%;
+            height: auto;
+        }
+
+        .plandis{
+            flex: 3;
+        }
+
+        .realimg{
+            width: 80px;
+            height: 80px;
+            border-radius: 12px;
+        }
+        
+        h2 {
+            margin: 10px 8px 0px;
+            font-size: 20px;
+        }
+
+        p{
+            margin: 10px 8px 0px;
+            font-size: 15px;
+        }
+
+        h3{
+            margin: 10px 8px 0px;
+            font-size: 10px;
+        }
+    }
+
+
+
+}

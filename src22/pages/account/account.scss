@@ -1,0 +1,147 @@
+page-account {
+    .list {
+        margin: auto;
+        margin-top: 7px;
+        width: 90%;
+        .item {
+            padding-top: 4px;
+            padding-bottom: 4px;
+            margin-bottom: 5px;
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+            border-bottom: 1px solid #b7b7b7 !important;
+            padding-left: 5px;
+            border-radius: 12px;
+
+            &.profile {
+                margin-bottom: 15px;
+                padding-left: 16px;
+                border-bottom: 0px solid #b7b7b7 !important;
+                ion-avatar {
+                    width: 75px;
+                    height: 75px;
+                    position: relative;
+                    overflow: hidden;
+                    border-radius: 50%;
+                    img {
+                        position: absolute;
+                        top: 0 !important;
+                        left: 0 !important;
+                        right: 0 !important;
+                        bottom: 0 !important;
+                        margin: auto !important;
+                        width: 80px;
+                        height: 80px;
+                        max-width: unset !important;
+                    }
+                }
+                p {
+                    font-size: 1.3rem;
+                    font-weight: 400;
+                    padding-top: 3px;
+                }
+                h2 {
+                    font-weight: 500;
+                    span {
+                        &.small {
+                            margin-left: 5px;
+                            font-size: 1.2rem;
+                            font-weight: 400;
+                            min-width: 65px;
+                            color: #949494;
+                        }
+                        &.ml-auto {
+                            margin-left: auto;
+                            font-size: 1.1rem;
+                            font-weight: 300;
+                            min-width: 57px;
+                            text-align: right;
+                        }
+                    }
+                }
+            }
+            h2 {
+                font-size: 1.67rem;
+                font-weight: 400;
+                display: flex;
+                align-items: center;
+                margin-bottom: 0px;
+                ion-icon {
+                    margin-left: auto;
+                    color: #cbcbcb;
+                    font-size: 1.8rem;
+                    &.mr-auto {
+                        min-width: 69px;
+                        max-width: 69px;
+                        margin-left: 0;
+                        text-align: center;
+                        font-size: 2.3rem;
+                        img {
+                            width: 16px;
+                        }
+                    }
+                }
+            }
+            &.sign-out {
+                border-bottom: 0px solid #6a6a6a !important;
+                margin-top: -4px;
+                background: #35D400;
+                color: white;
+                margin-top: 14px;
+                h2 {
+                    display: block;
+                }
+            }
+            &:last-child {
+                border-bottom: 0px !important;
+            }
+        }
+    }
+    .label {
+        margin-right: 20px;
+    }
+    .item-inner {
+        padding: 0 !important;
+    }
+
+    ion-content {
+        background: linear-gradient( #35D400 , white);
+      }
+    
+      .header .toolbar .toolbar-background {
+        background-color: transparent;
+      }
+    
+      .header .toolbar .bar-button .button-inner ion-icon {
+        color:  white;
+        font-size: 3.0rem;
+      }
+    
+      .header .toolbar .title .toolbar-title {
+        color:  white;
+        font-size: 24px;
+        font-weight: 550;
+      }
+}
+.div-logo {
+    display: flex;
+    align-items: flex-end;
+    width: fit-content;
+}
+img.img-logo {
+    width: 140px;
+}
+h4.text-white-dev {
+    margin: inherit;
+}
+.footer-md::before {
+    background-image: none;
+}
+.item-branding-class {
+    background: none;
+    text-align: -webkit-center !important;
+    padding: 0px 10px 10px 0px !important;
+}
+.footer-class {
+    background: none;
+    position: unset !important;
+}

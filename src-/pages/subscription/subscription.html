@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-navbar>
+      <ion-title>{{'packages' | translate}}</ion-title>
+  </ion-navbar>
+  <!-- <div class="header-text text-white" text-center>
+      <h1 class="text-ellipsis">{{myPlanDetail.leads_remaining_for_today}}</h1>
+      <h2>{{'leads_left_today' | translate}}</h2>
+      <p>{{myPlanDetail.remaining_days_count}} {{'days_left' | translate}}</p>
+  </div> -->
+</ion-header>
+
+<ion-content>
+  <!--    <img src="assets/imgs/19.png">-->
+  <div class="dis" *ngFor="let plan of plans;let ind=index;">
+    <div class="img">
+      <img data-src={{imgs[ind]}} class="realimg">
+    </div>
+    <div class="plandis">
+      <h2>{{plan.name}}</h2>
+      <p>{{plan.description}}</p>
+      <!-- <h3 item-end>{{plan.priceToShow}}</h3> -->
+    </div>
+    
+  </div>
+
+  <ion-list *ngIf="plans" no-lines radio-group [(ngModel)]="selected" >
+      <h4 class="text-ellipsis">{{'purchase_plans' | translate}}</h4>
+      <!-- <div class="item" *ngFor="let plan of plans" (click)="planDetail(plan)"> -->
+      <div class="plans" *ngFor="let plan of plans; let ind=index;">
+          <ion-radio color="dark" value={{ind}} ></ion-radio>
+          <h2 class="text-ellipsis">{{plan.name}}</h2>
+          <p class="text-ellipsis">{{plan.description}}</p>
+          <h3 class="text-ellipsis" item-end>{{plan.priceToShow}}</h3>
+      </div>
+
+      <div class="buttn"> 
+        <button class="btn" (click)="checksub()"> Get This Subscription </button> 
+      </div>
+
+  </ion-list>
+</ion-content>
+<!-- <ion-footer>
+  <div class="fixed-bottom" text-center (click)="conatctus()">
+      <h5>{{'need_help' | translate}}<strong class="text-thime">{{'contact_us' | translate}}</strong></h5>
+  </div>
+</ion-footer> -->
+ 

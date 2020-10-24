@@ -1,0 +1,7 @@
+{
+  "name": "hmanprovider",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

@@ -1,0 +1,29 @@
+<!--
+  Generated template for the PagesIntroSliderPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+
+<ion-content padding style="position: relative;">
+
+  <ion-icon class="closeicon" name="close-circle" (click)="dismiss()"></ion-icon>
+  <ion-slides  pager>
+    <ion-slide *ngFor="let intro of introArray">
+      <img data-src="{{ intro.image_url }}" width="80%" height="80%"/>
+      <p> {{ intro.description }} </p>
+    </ion-slide>
+    <!-- <ion-slide>
+      <img src="./assets/imgs/s2.jpg" width="80%" height="80%"/>
+      <p> description... </p>
+    </ion-slide>
+    <ion-slide>
+      <img src="./assets/imgs/s3.jpg" width="80%" height="80%" />
+      <p> description... </p>
+    </ion-slide> -->
+  </ion-slides>
+
+
+
+</ion-content>

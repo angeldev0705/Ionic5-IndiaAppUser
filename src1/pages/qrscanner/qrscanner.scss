@@ -1,0 +1,27 @@
+page-qrscanner {
+
+    ion-app.cameraView, ion-app.cameraView ion-content, ion-app.cameraView .nav-decor {
+        background: transparent none !important;
+    }
+
+    .cameraView{
+        background: transparent !important;
+    }
+
+
+    img {
+        opacity: 0.5;
+        max-width: 95%;
+        max-height: calc(98% - 100px);
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        /* bring your own prefixes */
+        transform: translate(-50%, -50%);
+    }
+
+    ion-content {
+        background: transparent !important;
+    }
+
+}

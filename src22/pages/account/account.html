@@ -1,0 +1,95 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>{{'account' | translate}}</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <ion-list no-lines>
+        <ion-item class="profile" (click)="myprofile()">
+            <ion-avatar item-start>
+                <img *ngIf="profile.user && profile.user.image_url" data-src="{{profile.user.image_url}}">
+                <img *ngIf="!profile.user || !profile.user.image_url" src="assets/imgs/empty_dp.png">
+            </ion-avatar>
+            <h2>
+                <span  class="text-ellipsis">{{profile.user.name}}</span>
+                <!-- <span *ngIf="profile && profile.primary_category && profile.primary_category.title" class="small">|
+                    {{profile.primary_category.title}}</span> -->
+                <span *ngIf="profile.is_verified==1"
+                    class="text-green ml-auto ">{{'verified' | translate}}</span>
+            </h2>
+            <p class="text-thime">{{'view_profile' | translate}}</p>
+        </ion-item>
+
+        <ion-item (click)="my_portfolio()">
+            <h2>
+                <ion-icon name="md-photos" class="mr-auto text-thime"></ion-icon>
+                <span class="text-ellipsis">{{'my_portfolio' | translate}}</span>
+            </h2>
+        </ion-item>
+        <!-- <ion-item (click)="packages()">
+            <h2>
+                <ion-icon name="md-clipboard" class="mr-auto text-thime"></ion-icon>
+                <span class="text-ellipsis">{{'packages' | translate}}</span>
+            </h2>
+        </ion-item> -->
+        <ion-item  *ngIf="profile.user && profile.is_verified!=1 "(click)="uploadDocument()">
+            <h2>
+                <ion-icon name="cloud-upload" class="mr-auto text-thime"></ion-icon>
+                <span class="text-ellipsis">{{'upload_document' | translate}}</span>
+            </h2>
+        </ion-item>
+        <ion-item (click)="QR()">
+            <h2>
+                <ion-icon ios="ios-qr-scanner" md="md-qr-scanner" class="mr-auto text-thime"></ion-icon>
+                <span class="text-ellipsis">{{'QR Scanner' | translate}}</span>
+            </h2>
+        </ion-item>
+        <ion-item (click)="conatctus()">
+            <h2>
+                <ion-icon name="ios-mail" class="mr-auto text-thime"></ion-icon>
+                <span class="text-ellipsis">{{'contact_us' | translate}}</span>
+            </h2>
+        </ion-item>
+        <ion-item (click)="privacy()">
+            <h2>
+                <ion-icon name="md-lock" class="mr-auto text-thime"></ion-icon>
+                <span class="text-ellipsis">{{'privacy_policy' | translate}}</span>
+            </h2>
+        </ion-item>
+        <ion-item (click)="aboutus()">
+            <h2>
+                <ion-icon name="md-contact" class="mr-auto text-thime"></ion-icon>
+                <span class="text-ellipsis">{{'about_us' | translate}}</span>
+            </h2>
+        </ion-item>
+        <ion-item (click)="faqs()">
+            <h2>
+                <ion-icon name="md-list" class="mr-auto text-thime"></ion-icon>
+                <span class="text-ellipsis">{{'faq' | translate}}</span>
+            </h2>
+        </ion-item>
+        <ion-item (click)="chooseLanguage()">
+            <h2>
+                <ion-icon name="md-globe" class="mr-auto text-thime"></ion-icon>
+                <span class="text-ellipsis">{{'change_language' | translate}}</span>
+            </h2>
+        </ion-item>
+    </ion-list>
+    <ion-list no-lines>
+        <ion-item class="sign-out" (click)="alertLogout()">
+            <h2 text-center>
+                <strong class="text-ellipsis" text-center>
+                    {{'sign_out' | translate}}
+                </strong>
+            </h2>
+        </ion-item>
+    </ion-list>
+    <ion-footer *ngIf="config.demoMode" class="footer-class">
+        <ion-item class="item-branding-class" (click)="developedBy()" no-lines>
+            <div class="div-logo">
+                <h4 class="text-white-dev">{{'developed_by' | translate}}</h4>
+                <img class="img-logo" src="assets/imgs/VT_black_logo.png" alt="">
+            </div>
+        </ion-item>
+    </ion-footer>
+</ion-content>

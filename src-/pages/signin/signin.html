@@ -1,0 +1,70 @@
+<ion-content>
+    <div class="logo-box">
+        <div class="logo">
+            <img src="assets/imgs/logo.png">
+            <!-- <h1 class="text-white">{{config.appName}}</h1> -->
+        </div>
+    </div>
+
+    <p style="color: #fff;" text-center>{{'sign_in_or_sign_up_to_continue' | translate}}</p>
+
+    <div class="maindiv">
+
+        <div class="ctyselect">
+          <ion-select [(ngModel)]="countryCode" interface="popover" multiple="false" class="text-thime" [okText]="'okay' | translate" [cancelText]="'cancel' | translate" (ionChange)="changeHint()">
+            <ion-option [value]="country.callingCodes[0]" *ngFor="let country of countries; let ind = index;" [selected]="country.name == 'Romania'"> <img src="{{country.flag}}"> {{country.name}}
+            </ion-option>
+          </ion-select>
+          <!-- <ion-input placeholder="Mobile Number" [(ngModel)]="phoneNumber" (keyup.enter)="alertPhone()" type="tel" [disabled]="inpdis"></ion-input> -->
+        </div>
+  
+  
+        <div class="mobselect">
+          <span style="padding-top: 13px;">{{"(+"+countryCode+")"}}</span>
+          <input placeholder="Mobile Number" [(ngModel)]="phoneNumber" (keyup.enter)="alertPhone()" type="tel" #user>
+        </div>
+    </div>  
+
+    <div class="form">
+        <!-- <ion-list inset padding-bottom>
+             <ion-item>
+                <ion-avatar item-start>
+                    <ion-icon name="md-globe" class="text-thime"></ion-icon>
+                </ion-avatar>
+                <ion-label floating>{{'select_country' | translate}}</ion-label>
+                <ion-select [(ngModel)]="countryCode" multiple="false" class="text-thime" [okText]="'okay' | translate"
+                    [cancelText]="'cancel' | translate" (ionChange)="changeHint()">
+                    <ion-option [value]="country.callingCodes[0]" *ngFor="let country of countries">{{country.name}}
+                    </ion-option>
+                </ion-select>
+                //comment this line <ion-icon name="ios-arrow-down-outline" item-end class="text-thime"></ion-icon>
+            </ion-item> 
+
+            <ion-item>
+                <ion-avatar item-start>
+                    <ion-icon name="md-phone-portrait" class="text-thime"></ion-icon>
+                </ion-avatar>
+                <ion-label floating>{{phoneNumberHint}}</ion-label>
+                <ion-input (keyup.enter)="alertPhone()" [(ngModel)]="phoneNumber" type="tel"></ion-input>
+            </ion-item>
+        </ion-list>-->
+        <button class="btn" ion-button round full margin-top margin-bottom
+            (click)="alertPhone()">{{'continue' | translate}}</button>
+        <div class="social">
+            <p text-center>{{'or_continue_with' | translate}}</p>
+            <ion-row>
+                <ion-col>
+                    <button class="btn google" ion-button round full margin-top margin-bottom
+                        (click)="signInGoogle()">{{'google' | translate}}</button>
+                </ion-col>
+            </ion-row>
+        </div>
+
+    </div>
+    <p text-center (click)="privacy()">
+        <small>
+            {{'by_signing_up' | translate}}
+            <ins>{{'terms_condition' | translate}}</ins>
+        </small>
+    </p>
+</ion-content>

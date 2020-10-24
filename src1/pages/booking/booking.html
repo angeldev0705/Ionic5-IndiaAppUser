@@ -1,0 +1,136 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>{{'job_detail' | translate}}</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="bg-light">
+    <ion-list class="profile">
+        <ion-item>
+            <ion-avatar item-start>
+                <img *ngIf="appointment.user && appointment.user.image_url" data-src="{{appointment.user.image_url}}">
+                <img *ngIf="!appointment.user || !appointment.user.image_url" src="assets/imgs/empty_dp.png">
+            </ion-avatar>
+            <h2 class="d-flex">
+                <strong class="text-ellipsis">{{appointment.user.name}}</strong>
+                <span class="end">
+                    <ion-icon name="md-call" class="text-thime" text-start (click)="callUser()"></ion-icon>
+                    <ion-icon name="md-text" class="text-thime" text-end (click)="chatscreen()"></ion-icon>
+                </span>
+            </h2>
+            <div class="details">
+                <p *ngIf="appointment.category">
+                    <small>{{'job_task' | translate}}</small>
+                    <span class="text-ellipsis">{{appointment.category.title}}</span>
+                </p>
+                <ion-row>
+                    <ion-col col-6>
+                        <p>
+                            <small>{{'date' | translate}}</small>
+                            <span class="text-ellipsis">
+                                {{appointment.date}}
+                            </span>
+                        </p>
+                    </ion-col>
+                    <ion-col col-6>
+                        <p class="job-fess">
+                            <small>{{'time' | translate}}</small>
+                            <span class="text-ellipsis">
+                                {{appointment.time_from}}-{{appointment.time_to}}
+                            </span>
+                        </p>
+                    </ion-col>
+                </ion-row>
+                <div class="location" (click)="navigate()">
+                    <p *ngIf="appointment.address" class="job-fess">
+                        <small>{{'address' | translate}}</small>
+                        <span>{{appointment.address.address}}</span>
+                    </p>
+                    <ion-icon name="md-navigate" class="text-thime"></ion-icon>
+                </div>
+                <p *ngIf="appointment.notes && appointment.notes.length" class="job-fess">
+                    <small>{{'appointment_notes' | translate}}</small>
+                    <span>{{appointment.notes}}</span>
+                </p>
+            </div>
+        </ion-item>
+    </ion-list>
+    <div class="btn-container">
+        <ion-row *ngIf="appointment.status=='pending'">
+            <ion-col col-6>
+                <button ion-button icon-start full (click)="checkAppointment('rejected')">
+                    <ion-icon name="md-close"></ion-icon>{{'cancel_job' | translate}}
+                </button>
+            </ion-col>
+            <ion-col col-6>
+                <button ion-button icon-start full class="text-green" (click)="checkAppointment('accepted')">
+                    <ion-icon class="zmdi zmdi-check-circle"></ion-icon>{{'accept_job' | translate}}
+                </button>
+            </ion-col>
+        </ion-row>
+        <ion-row
+            *ngIf="appointment.status=='rejected' || appointment.status=='cancelled' || appointment.status=='complete'">
+            <ion-col *ngIf="appointment.status=='rejected'">
+                <button ion-button icon-start full>
+                    <ion-icon class="zmdi zmdi-close"></ion-icon>{{'job_rejected' | translate}}
+                </button>
+            </ion-col>
+            <ion-col *ngIf="appointment.status=='cancelled'">
+                <button ion-button icon-start full>
+                    <ion-icon class="zmdi zmdi-close"></ion-icon>{{'job_cancelled' | translate}}
+                </button>
+            </ion-col>
+            <ion-col *ngIf="appointment.status=='complete'">
+                <button ion-button icon-start full class="text-green">
+                    <ion-icon name="ios-checkmark-circle"></ion-icon>{{'job_completed' | translate}}
+                </button>
+            </ion-col>
+        </ion-row>
+        <ion-row *ngIf="appointment.status=='accepted' || appointment.status=='onway' || appointment.status=='ongoing'">
+            <ion-col *ngIf="appointment.status=='accepted'">
+                <button ion-button icon-start full class="text-green" (click)="checkAppointment('onway')">
+                    <ion-icon class="zmdi zmdi-bike"></ion-icon>{{'gofor_job' | translate}}
+                </button>
+            </ion-col>
+            <ion-col *ngIf="appointment.status=='onway'">
+                <button ion-button icon-start full class="text-green" (click)="checkAppointment('ongoing')">
+                    <ion-icon class="zmdi zmdi-wrench"></ion-icon>{{'start_job' | translate}}
+                </button>
+            </ion-col>
+            <ion-col *ngIf="appointment.status=='ongoing'" (click)="checkAppointment('complete')">
+                <button ion-button icon-start full class="text-green">
+                    <ion-icon class="zmdi zmdi-thumb-up"></ion-icon>{{'mark_job_complete' | translate}}
+                </button>
+            </ion-col>
+        </ion-row>
+    </div>
+    <div class="job-status">
+        <h2>{{'job_status' | translate}}</h2>
+        <ion-list no-lines>
+            <ion-item [ngClass]="statusLevel==1 ? 'active' : 'disable'">
+                <span item-start class="circle"></span>
+                <div class="text">
+                    <h4 class="text-ellipsis">{{'job_'+appointment.status | translate}}
+                        <small *ngIf="statusLevel1Time">{{statusLevel1Time}}</small>
+                    </h4>
+                </div>
+            </ion-item>
+            <ion-item [ngClass]="statusLevel==2 ? 'active' : 'disable'">
+                <span item-start class="circle"></span>
+                <div class="text">
+                    <h4 class="text-ellipsis">{{'job_in_process' | translate}}
+                        <small *ngIf="statusLevel2Time">{{statusLevel2Time}}</small>
+                    </h4>
+                </div>
+            </ion-item>
+            <ion-item [ngClass]="statusLevel==3 ? 'active' : 'disable'">
+                <span item-start class="circle"></span>
+                <div class="text">
+                    <h4 class="text-ellipsis">{{'job_complete' | translate}}
+                        <small *ngIf="statusLevel3Time">{{statusLevel3Time}}</small>
+                    </h4>
+                </div>
+            </ion-item>
+        </ion-list>
+    </div>
+</ion-content>

@@ -1,0 +1,155 @@
+{
+  "project_info": {
+    "project_number": "1084053651775",
+    "firebase_url": "https://mil-bc2b0.firebaseio.com",
+    "project_id": "mil-bc2b0",
+    "storage_bucket": "mil-bc2b0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1084053651775:android:9f53fff610880a1dad938a",
+        "android_client_info": {
+          "package_name": "com.twomil.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1084053651775-71bspedojlj0ssgibveu26h4hu1qh6b4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.twomil.app",
+            "certificate_hash": "80e6b56fed08e5a80bbad709257247abd79cef8f"
+          }
+        },
+        {
+          "client_id": "1084053651775-44e1g2cla4v3p964f794g089554invmh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.twomil.app",
+            "certificate_hash": "a99a499513dabf0a42d77fc5eec9d700918cbed5"
+          }
+        },
+        {
+          "client_id": "1084053651775-mj2insdveq5itm1todjtt42emkls61bu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.twomil.app",
+            "certificate_hash": "44c868a4b8722a3a7c0487f369aafff268d4afd2"
+          }
+        },
+        {
+          "client_id": "1084053651775-ktkdguhrlud42fq0533gke3vbo3cdd6s.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.twomil.app",
+            "certificate_hash": "b7626338dc1d0a83dfe22a6f2ab48821038404ce"
+          }
+        },
+        {
+          "client_id": "1084053651775-8ol6da00p4fohsupfmh66hm4335cd3bv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.twomil.app",
+            "certificate_hash": "574f19e29258dff4c43b6a0134bf93a130b42ea5"
+          }
+        },
+        {
+          "client_id": "1084053651775-lvrno0df09rrc978msopobahuqdan56p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBjZAsdyER3T3L3ThEvwaLn8FtekhrCBq0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1084053651775-lvrno0df09rrc978msopobahuqdan56p.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1084053651775-iujt7vs1hc8hrv9qf99s0ce4jcqjptao.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.twomil.pro"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1084053651775:android:b492e45cc3ac3bffad938a",
+        "android_client_info": {
+          "package_name": "com.twomil.pro"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1084053651775-bb8of6m948i14qauujegphfp8rr1jaf1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.twomil.pro",
+            "certificate_hash": "e7ebb9c19fba6406c5dbbce679740d4fc2bf4b3d"
+          }
+        },
+        {
+          "client_id": "1084053651775-476r8mf421ob1p5tuuhf5ga4ogs2pbrt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.twomil.pro",
+            "certificate_hash": "80e6b56fed08e5a80bbad709257247abd79cef8f"
+          }
+        },
+        {
+          "client_id": "1084053651775-in0btqq7hsctl3m3hgs63scgndnnsad8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.twomil.pro",
+            "certificate_hash": "a99a499513dabf0a42d77fc5eec9d700918cbed5"
+          }
+        },
+        {
+          "client_id": "1084053651775-u2at4fhfocr2kki1nnt8clrjpagfqpk6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.twomil.pro",
+            "certificate_hash": "574f19e29258dff4c43b6a0134bf93a130b42ea5"
+          }
+        },
+        {
+          "client_id": "1084053651775-lvrno0df09rrc978msopobahuqdan56p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBjZAsdyER3T3L3ThEvwaLn8FtekhrCBq0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1084053651775-lvrno0df09rrc978msopobahuqdan56p.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1084053651775-iujt7vs1hc8hrv9qf99s0ce4jcqjptao.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.twomil.pro"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
